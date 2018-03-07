@@ -5,7 +5,7 @@
   * asynchronous requests send and retrieve data to the backend, and React attempts to update the minimum number of elements
 
 ##### Virtual Dom
-  * 
+  *
 ##### Diffing Algorithm
 
 ##### JSX
@@ -13,3 +13,6 @@
 
 #### Create React App
   * create apps with no build configuration
+
+  * **registeredServiceWorker**:
+    * Progressive Web App
