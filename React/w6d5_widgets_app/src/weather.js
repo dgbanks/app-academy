@@ -5,8 +5,17 @@ class Weather extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(position => {
+      return [position.coords.latitude, position.coords.longitude];
+    });
+  }
+
   render() {
-    
+    return (
+      <div>
+      </div>
+    );
   }
 }
 

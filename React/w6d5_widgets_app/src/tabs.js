@@ -18,6 +18,7 @@ class Tabs extends React.Component {
             this.props.tabs.map((tab, i) => {
               return (
                 <div
+                  key={i}
                   style={{border: "1px solid yellow"}}
                   onClick={() => this.setState({selectedIndex: i})}>
                   {tab.title}
