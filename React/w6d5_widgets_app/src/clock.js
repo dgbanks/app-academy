@@ -3,7 +3,6 @@ import React from 'react';
 class Clock extends React.Component {
   constructor() {
     super();
-
     this.state = { time: new Date() };
     this.tick = this.tick.bind(this);
   }
@@ -25,7 +24,7 @@ class Clock extends React.Component {
     let minutes = this.state.time.getMinutes();
     let seconds = this.state.time.getSeconds();
     return (
-      <div style={{border: "1px solid red"}}>
+      <div style={{width: '50%', border: "1px solid red"}}>
         <h1>This is a clock</h1>
         <h3>{`${
           hours < 10 ? '0' + hours : hours
