@@ -16,3 +16,5 @@
 
   * **registeredServiceWorker**:
     * Progressive Web App
+      * Progressive: works for all browsers
+      * Responsive: fits any device
