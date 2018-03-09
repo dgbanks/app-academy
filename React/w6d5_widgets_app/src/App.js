@@ -4,6 +4,8 @@ import './App.css';
 import Clock from './clock';
 import Tabs from './tabs';
 import Weather from './weather';
+import Autocomplete from './autocomplete';
+import Calculator from './calculator';
 
 class App extends Component {
   render() {
@@ -16,6 +18,11 @@ class App extends Component {
           {title: 'Three', content: 'everything'}
         ]}/>
         <Weather />
+        <Autocomplete names={
+          ['one', 'two', 'three', 'four', 'five',
+          'six', 'seven', 'eight', 'nine', 'ten']
+        }/>
+        <Calculator />
       </div>
     );
   }
