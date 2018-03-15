@@ -13,12 +13,19 @@
     * ```after_destroy``` clean-up logic
     * you can further specify situations to run and not run a callback like so:
       * ```before_validation(on: :create) do ... end```
-      
+
 ### Delegation
 ### DNS
 ### Routing
   * **Basics**
-  * **Nested Controllers**
+    * starting the Rails server creates an instance of Router, which holds instances of Route defined by ```routes.rb```
+    * the Router reads the URL and chooses a controller method to which the request is dispatched for processing (using a regular expression!)
+    * the REST philosophy: all actions can be thought of in terms of resource CRUD operations
+    * routing helper: the route name + ```_url```
+    * the ```root``` method (```root to: 'posts#index'```) specifies the controller action for ```GET /```
+    * a controller manages requests pertaining to a collection of resources (resource: any CRUDable thing)
+  * **Nested Collections**
+    *
   * **Adding non-default routes**
 ### Basic Controllers
 ### JSON API
