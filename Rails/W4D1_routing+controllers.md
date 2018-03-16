@@ -25,7 +25,15 @@
     * the ```root``` method (```root to: 'posts#index'```) specifies the controller action for ```GET /```
     * a controller manages requests pertaining to a collection of resources (resource: any CRUDable thing)
   * **Nested Collections**
-    *
+    * nesting ```index``` routes makes sense
+    * ```create``` should always be a top-level route, but ```new``` can be nested
   * **Adding non-default routes**
+    * collection
+
 ### Basic Controllers
-### JSON API
+  * the controller makes sense of the request and produces the appropriate output
+  * a new Rails project creates a blank class ```ApplicationController```, which extends ```ActionController::Base```
+    * all new controllers are subclasses of ```ApplicationController```
+  * Rails mixes query string and request body parameter into a single hash returned by the ```ActionController::Base#params``` method
+  * strong parameters:
+    * the ```#permit``` of the params hash is required to whitelist nested attributes for mass assignment
