@@ -15,7 +15,8 @@ class ArtworksController < ApplicationController
   end
 
   def index
-    artworks = Artwork.all
+    user = User.find(params[:user_id])
+    artworks = [].concat(user.artworks).concat(user.shared_artworks)
     render json: artworks
   end
 

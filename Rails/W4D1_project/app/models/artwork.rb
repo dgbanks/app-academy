@@ -1,5 +1,4 @@
 class Artwork < ApplicationRecord
-
   validates :title, :img_url, presence: true
   validates :img_url, uniqueness: true
   validates :title, uniqueness: { scope: :artist_id }
@@ -9,4 +8,6 @@ class Artwork < ApplicationRecord
 
   has_many :artwork_shares, dependent: :destroy
   has_many :shared_viewers, through: :artwork_shares, source: :viewer
+
+  has_many :comments, dependent: :destroy
 end
